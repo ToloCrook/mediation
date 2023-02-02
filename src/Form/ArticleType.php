@@ -3,15 +3,13 @@
 namespace App\Form;
 
 use App\Entity\Article;
-use App\Entity\Category;
-use Doctrine\DBAL\Types\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\File;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 
 class ArticleType extends AbstractType
@@ -19,17 +17,12 @@ class ArticleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('title')
-            ->add('content')
+            ->add('title', TextType::class)
+            ->add('content', TextType::class)
             ->add('image', FileType::class, [
                 'constraints' => [
                     new File([
                         'maxSize' => '1024k',
-//                        'mimeTypes' => [
-//                            'application/jpg',
-//                            'application/png',
-//                            'application/jpeg',
-//                        ],
                         'mimeTypesMessage' => 'Importez un format en .jpg, .jpeg ou .png',
                     ])
                 ],

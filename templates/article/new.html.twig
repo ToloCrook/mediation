@@ -3,9 +3,7 @@
 {% block title %}New Article{% endblock %}
 
 {% block body %}
-    <h1>Create new Article</h1>
+    <h2 class="text-center border-bottom border-primary">Nouvel article</h2>
 
     {{ include('article/_form.html.twig') }}
-
-    <a href="{{ path('app_article_index') }}">back to list</a>
 {% endblock %}

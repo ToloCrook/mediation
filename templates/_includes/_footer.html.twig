@@ -1,6 +1,36 @@
-<footer class="h-75 w-100 bg-secondary mt-auto">
-hello
-    hello
-    <br>
-    hello
+<footer class="w-100 bg-primary mt-auto d-flex justify-content-around text-light ">
+    <div class="d-flex flex-column justify-content-center text-light">
+        <ul class="list-unstyled" style="font-size: 1.4rem;">
+            <li class="nav-item p-2">
+                <a href="/#navbar" class="text-light text-decoration-none">
+                    Accueil
+                </a>
+            </li>
+            <li class="nav-item p-2">
+                <a href="{{ path('app_article_index') }}" class="text-light text-decoration-none">
+                    En savoir plus sur la médiation
+                </a>
+            </li>
+            <li class="nav-item p-2">
+                <a href="{{ path('app_contact') }}" class="text-light text-decoration-none">
+                    Contact
+                </a>
+
+            </li>
+        </ul>
+    </div>
+    <div class="d-flex flex-column justify-content-end m-3">
+        <div class="d-flex">
+            <a href="https://linkedin.com">
+                <img src="{{ asset('/build/images/linkedin2.png') }}" alt="linkedin" style="margin-right: 10px;">
+            </a>
+            <a href="https://facebook.com">
+                <img src="{{ asset('/build/images/facebook2.png') }}" alt="facebook">
+            </a>
+        </div>
+    </div>
+    <div class="mt-3">
+        <img src="{{ asset('/build/images/géoloc3.png') }}" alt="geoloc">
+        <p>Adresse : Résidence Blabla, 33400 Talence</p>
+    </div>
 </footer>
