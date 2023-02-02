@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% for category, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="align-self-center w-25 alert alert-{{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+    <div class="container w-75 d-flex justify-content-center mb-5">
+        <div class="container w-50 align-self-center">
+            <h2>Mon adresse :</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+            <h2>Mon numéro de téléphone :</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+        <div class="container w-50  p-5 bg-secondary">
+            <p class="text-center">Ecrivez-moi pour toute information : prise de rendez-vous, renseignements...</p>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

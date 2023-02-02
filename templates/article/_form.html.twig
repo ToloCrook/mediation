@@ -1,4 +1,6 @@
-{{ form_start(form) }}
+<div class="container w-50 mb-5">
+    {{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+    <button class="btn btn-primary d-flex m-auto">{{ button_label|default('Save') }}</button>
+    {{ form_end(form) }}
+</div>
