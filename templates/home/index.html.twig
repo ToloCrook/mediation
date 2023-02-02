@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+    {#  En-tête "Qui suis-je ?"  #}
+    <div class="border-top border-bottom border-primary d-flex justify-content-around align-items-center mb-5 bg-light">
+        <div class="container d-flex">
+            <img src="{{ asset('build/images/photo-profil-mediation-300.jpg') }}" class="rounded-circle h-25 m-4"
+                 alt="profile-pic">
+            <h2 class="shadow p-5 m-5 bg-body-tertiary bg-white text-center h-25 rounded-5 align-self-center">
+                " Qui suis -je ? <br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt
+                ut labore et dolore magna aliqua. "
+            </h2>
+        </div>
+    </div>
+
+    {#    Div d'espacement    #}
+    <div class="container mt-5 mb-5"></div>
+
+    {#    Accordéon   #}
+    <div class="container mb-5 w-75">
+        {% include '/_includes/_accordeon.html.twig' %}
+    </div>
+
+    {#    Div d'espacement    #}
+    <div class="container mt-5 mb-5"></div>
+
+{#    Blocs d'infos supplémentaires    #}
+    <div class="d-flex justify-content-between bg-secondary w-100 mb-5 pb-3 pt-5">
+        <div class="row d-flex text-center">
+            <div class="col-lg-4">
+                <img src="{{ asset('build/images/question.png') }}" style="width: 10vw; height: 20vh;" class="mb-5">
+                <h2 class="fw-normal">Qui suis-je ?</h2>
+                <p>Some representative placeholder content for the three columns of text below the carousel. This is the
+                    first column.</p>
+                <p><a class="btn btn-primary mt-3" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="{{ asset('build/images/loupe.png') }}" style="width: 10vw; height: 20vh;" class="mb-5">
+                <h2 class="fw-normal">Découvrez la médiation</h2>
+                <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second
+                    column.</p>
+                <p><a class="btn btn-primary mt-3" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="{{ asset('build/images/contact-mail.png') }}" style="width: 10vw; height: 20vh;" class="mb-5">
+                <h2 class="fw-normal">Contactez-moi</h2>
+                <p>And lastly this, the third column of representative placeholder content.</p>
+                <p><a class="btn btn-primary mt-3" href="#">View details »</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div>
+    </div>
+
+{#    Bloc contenu texte    #}
+    <div class="container w-50 mb-5">
+        Lorem ipsum dolor sit amet. Cum aspernatur similique eos quos necessitatibus sit obcaecati enim qui praesentium
+        enim vel placeat iusto in autem voluptas? Eos similique necessitatibus ex officiis iusto nam nulla assumenda?
+
+        Et ullam magni sed consequatur tempora sed dolores eius. Est beatae voluptas qui molestiae aliquid et voluptatem
+        galisum sed suscipit illum 33 vero voluptate aut saepe culpa. Id laborum deleniti ut inventore voluptatem aut
+        sapiente quia ea voluptas temporibus et quibusdam quod eos autem vero et voluptas quis.
+
+        In nostrum accusantium a omnis nostrum ut consectetur repellat qui vitae voluptatem eum sunt commodi. In nihil
+        dolores eum omnis quae in optio rerum id perferendis ipsam ea laboriosam laborum. Et ipsa ipsum vel similique
+        nemo est Quis atque qui eligendi rerum eos Quis velit! Qui maiores possimus eos totam debitis aut nesciunt
+        obcaecati ex assumenda rerum id nostrum dolor.
+    </div>
+{% endblock %}
+

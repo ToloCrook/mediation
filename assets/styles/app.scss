@@ -1,0 +1,32 @@
+$primary: #036264;
+$secondary: #BDD9CD;
+//$light: #BCC5B4;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import '~bootstrap/scss/bootstrap';
+@import 'articles.scss';
+@import 'navbar.scss';
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Lora;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: Lato;
+}
+
+
+
+
+
+

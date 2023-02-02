@@ -1,0 +1,10 @@
+.articles-container {
+  background-color: $light;
+  //border-top: 1px solid $primary;
+  //border-bottom: 1px solid $primary;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}

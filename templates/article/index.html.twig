@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article index{% endblock %}
+
+{% block body %}
+    {#    <div class="articles-container"> #}
+    {#        <div class="container w-75"> #}
+    {#            <div class="row"> #}
+    {#                {% for article in articles|slice(0,2) %} #}
+    {#                    <div class="card col border-primary" style="width: 18rem;"> #}
+    {#                        <img src="{{ asset('uploads/images/'~article.image) }}" class="card-img-top" alt="{{ article.title }}"> #}
+    {#                        <div class="card-body"> #}
+    {#                            <h5 class="card-title">{{ article.title }}</h5> #}
+    {#                            <p class="card-text">{{ article.content }}.</p> #}
+    {#                            <a href="{{ path('app_article_show', {id: article.id}) }}" class="btn btn-primary">Voir #}
+    {#                                plus</a> #}
+    {#                        </div> #}
+    {#                    </div> #}
+    {#                {% endfor %} #}
+    {#                <div class="w-100"></div> #}
+    {#                {% for article in articles|slice(2,4) %} #}
+    {#                    {% if article.id > 2 %} #}
+    {#                        <div class="card col border-primary" style="width: 18rem;"> #}
+    {#                            <img src="{{ asset('uploads/images/'~article.image) }}" class="card-img-top h-50 w-50" alt="{{ article.title }}"> #}
+    {#                            <div class="card-body"> #}
+    {#                                <h5 class="card-title">{{ article.title }}</h5> #}
+    {#                                <p class="card-text">{{ article.content }}.</p> #}
+    {#                                <a href="{{ path('app_article_show', {id: article.id}) }}" class="btn btn-primary">Voir #}
+    {#                                    plus</a> #}
+    {#                            </div> #}
+    {#                        </div> #}
+    {#                    {% endif %} #}
+    {#                {% endfor %} #}
+    {#            </div> #}
+    {#        </div> #}
+    {#    </div> #}
+
+    <div style="width: 85%;" class="d-flex m-auto">
+        <div style="width: 75%;">
+            <h3 class="border-bottom border-primary">Nouveautés</h3>
+        </div>
+        <div style="width: 25%;">
+            <h3 class="border-bottom border-primary">Nouveautés</h3>
+        </div>
+    </div>
+
+    {% for article in articles %}
+    <div class="container w-100 d-flex">
+        <div class="container w-75 d-flex bg-secondary border-bottom border-primary">
+
+            <div class="container w-50 m-4">
+                <img src="{{ asset('uploads/images/'~article.image) }}" class="card-img-top" alt="{{ article.title }}">
+            </div>
+            <div class="container w-50 d-flex flex-column align-items-start align-self-center">
+                    <h3 class="card-title fw-bold">{{ article.title }}</h3>
+                    <p class="card-text text-primary">{{ article.content }}</p>
+                    <a href="" class="btn btn-primary text-light">Voir
+                        plus »</a>
+            </div>
+        </div>
+
+        <div class="container w-25 bg-primary m-5">
+            <div class="card-body">
+                <h5 class="card-title">sdfsdfsdf</h5>
+                <p class="card-text">sdfsdfsdf</p>
+                <a href="" class="btn btn-primary">Voir
+                    plus</a>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">sdfsdfsdf</h5>
+                <p class="card-text">sdfsdfsdf</p>
+                <a href="" class="btn btn-primary">Voir
+                    plus</a>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h1>Article index</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Content</th>
+            <th>Image</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+            <tr>
+                <td>{{ article.id }}</td>
+                <td>{{ article.title }}</td>
+                <td>{{ article.content }}</td>
+                <td><img src="{{ article.image }}" alt="{{ article.title }}"></td>
+                <td>
+                    <a href="{{ path('app_article_show', {'id': article.id}) }}">show</a>
+                    <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_article_new') }}">Create new</a>
+{% endblock %}
