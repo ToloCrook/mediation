@@ -1,5 +1,6 @@
 - Run composer install
 - Run yarn install
+- Run yarn add bootstrap --dev
 - Run Yarn watch
 
 Migrations :
